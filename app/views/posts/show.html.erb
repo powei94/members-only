@@ -1,4 +1,38 @@
-<p id="notice"><%= notice %></p>
+<div class="container-sm">
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+  <div class="row">
+    <div class="col-sm">
+        
+        <div class="media border border-primary rounded p-2 my-2">
+          <div class="d-flex flex-column align-items-center mr-3">
+            <img src="https://api.adorable.io/avatars/64/abott@adorable.png" class="rounded" alt="...">
+            <% if user_signed_in? %>
+              <h6 class="text-secondary">@<%= @post.user.username %></h6>
+            <% end %>
+          </div>
+          <div class="media-body">
+            <h5><strong><%= @post.title %></strong></h5>
+            <p><%= @post.content %></p>
+          </div>
+          <div class="btn-group" role="group">
+              <%= link_to @post, class: "btn btn-secondary" do %>
+                  <i class="fas fa-link"></i>
+              <% end %>
+              <%= link_to edit_post_path(@post), class: "btn btn-secondary" do %>
+                  <i class="fas fa-edit"></i>
+              <% end%>
+              <%= link_to @post, method: :delete, data: { confirm: '¿Deseas borrar este post?' }, class: "btn btn-secondary" do %>
+                  <i class="fas fa-trash"></i>
+              <% end %>
+          </div>
+        
+        </div>
+
+        
+
+        <%= link_to 'Editar', edit_post_path(@post) %> |
+        <%= link_to 'Volver atrás', posts_path %>
+    </div>
+  </div>
+</div>
+
