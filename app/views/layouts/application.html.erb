@@ -11,8 +11,20 @@
 
   <body>
     <script src="https://kit.fontawesome.com/be94cb8174.js" crossorigin="anonymous"></script>
+    <script>
+      setTimeout("$('.alert').fadeOut('slow')", 3000)
+    </script>
     <%= render 'layouts/navbar'%>
-    <p><%= notice %></p>
+    <% if notice %>
+    <div class="alert alert-success"> 
+        <%= notice %>
+      <% end %>
+    </div>
+    <% if alert %>
+    <div class="alert alert-warning"> 
+        <%= alert %>
+      <% end %>
+    </div>
 
     <%= yield %>
   </body>
