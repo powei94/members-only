@@ -1,24 +1,11 @@
-# README
+# MEMBERS-ONLY
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Aplicación web simple de posteos, solo los miembros pueden ver quienes realizaron cada post, los invitados pueden visualizar los posts sin su autor, tiene sistema de autenticación y permisos para crear, editar y borrar.
 
-Things you may want to cover:
+Construida con:
 
-* Ruby version
+* Rails 5.2 
+* Devise
+* Bootstrap
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+[Ver en navegador](https://enigmatic-headland-51358.herokuapp.com/)
